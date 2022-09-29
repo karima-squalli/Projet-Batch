@@ -2,7 +2,7 @@ package projetbatch.io.read;
 
 import java.util.ArrayList;
 
-import projetbatch.dto.Client;
+import projetbatch.dto.Commande;
 
 
 
@@ -22,5 +22,5 @@ public interface Reader {
         }
     }
 	
-	ArrayList<Client> readFile(String filePath) throws Exception;
+	ArrayList<Commande> readFile(String filePath) throws Exception;
 }

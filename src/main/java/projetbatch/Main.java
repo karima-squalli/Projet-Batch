@@ -2,7 +2,7 @@ package projetbatch;
 
 import java.util.ArrayList;
 
-import projetbatch.dto.Client;
+import projetbatch.dto.Commande;
 import projetbatch.io.read.Reader;
 import projetbatch.io.write.Writer;
 
@@ -16,8 +16,8 @@ public class Main {
 		String writerFile = args[3];
 
 		Reader r = Reader.getReader(readerCode);
-		ArrayList<Client> clients = r.readFile(readerFile);
+		ArrayList<Commande> commandes = r.readFile(readerFile);
 		Writer w = Writer.getWriter(writerCode);
-		w.writeFile(writerFile, clients);
+		w.writeFile(writerFile, commandes);
 	}
 }

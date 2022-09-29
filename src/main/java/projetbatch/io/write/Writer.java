@@ -2,7 +2,7 @@ package projetbatch.io.write;
 
 import java.util.ArrayList;
 
-import projetbatch.dto.Client;
+import projetbatch.dto.Commande;
 
 
 public interface Writer {
@@ -21,5 +21,5 @@ public interface Writer {
         }
     }
 	
-	void writeFile(String filePath, ArrayList<Client> clients);
+	void writeFile(String filePath, ArrayList<Commande> commandes);
 }

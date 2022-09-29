@@ -2,7 +2,7 @@ package projetbatch.dto;
 
 import java.util.Date;
 
-public class Client {
+public class Commande {
 
 	private int id;
 	private String nom;
@@ -13,9 +13,9 @@ public class Client {
 	private double montant;
 	private String statut;
 	
-	public Client() {}
+	public Commande() {}
 	
-	public Client(int id, String nom, String prénom, Date date, String produit, double montant, String statut) {
+	public Commande(int id, String nom, String prénom, Date date, String produit, double montant, String statut) {
 		this.id = id;
 		this.nom = nom;
 		this.prénom = prénom;

@@ -7,18 +7,19 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import projetbatch.dto.Client;
+import projetbatch.dto.Commande;
 
 public class CsvReaderTest {
 	
 	@Test
 	public void readFileTestBasic() throws Exception {
+		
 		// Initialisation des données du test
-		ArrayList<Client> result = null;
+		ArrayList<Commande> result = null;
 		String filePath = "src/test/resources/input.csv";
 		CsvReader csvReader = new CsvReader();
 		
-		// Méthode testé
+		// Méthode testée
 		try {
 			result = csvReader.readFile(filePath);
 		} catch (Exception e) {
@@ -31,8 +32,9 @@ public class CsvReaderTest {
 
 	@Test
 	public void readFileTestThrowError() throws Exception {
+		
 		// Initialisation des données du test
-		ArrayList<Client> result = null;
+		ArrayList<Commande> result = null;
 		String filePath = "src/test/resources/input1.csv";
 		CsvReader csvReader = new CsvReader();
 		

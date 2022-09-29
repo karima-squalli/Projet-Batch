@@ -7,19 +7,19 @@ import java.util.List;
 
 import com.opencsv.CSVWriter;
 
-import projetbatch.dto.Client;
+import projetbatch.dto.Commande;
 import projetbatch.utils.Utils;
 
-class CsvWriter implements Writer {
+public class CsvWriter implements Writer {
 
 	/**
-	 * writeFile writes in a csv file some clients information (id and status)
+	 * writeFile writes in a csv file some commandes information (id and status)
 	 * @param filePath - the csv file path
-	 * @param clients - the array list of clients 
+	 * @param commandes - the array list of commandes 
 	 * return void
 	 */
 	@Override
-	public void writeFile(String filePath, ArrayList<Client> clients) {
+	public void writeFile(String filePath, ArrayList<Commande> commandes) {
 		
 	    try {
 	        FileWriter outputfile = new FileWriter(filePath);
@@ -31,8 +31,8 @@ class CsvWriter implements Writer {
 	  
 	        List<String[]> data = new ArrayList<String[]>();
 	        
-	        for (Client client: clients) {
-	        	data.add(new String[] { String.valueOf(client.getId()), client.getStatut(), Utils.convertDateToString(client.getDate()) });
+	        for (Commande commande: commandes) {
+	        	data.add(new String[] { String.valueOf(commande.getId()), commande.getStatut(), Utils.convertDateToString(commande.getDate()) });
 			}
 	        writer.writeAll(data);
 	        writer.close();
