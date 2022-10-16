@@ -13,7 +13,7 @@ public interface Reader {
 	 * @param code - the reader code (0 for csv reader) 
 	 * @return the appropriate reader class, or null if code is not recognized
 	 */
-	public static Reader getReader(int code) {
+	static Reader getReader(int code) {
         switch (code) {
             case 0: 
             	return new CsvReader();

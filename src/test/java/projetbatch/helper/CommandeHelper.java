@@ -11,7 +11,7 @@ public class CommandeHelper {
 		Commande commande = new Commande();
 		commande.setId(1);
 		commande.setNom("toto");
-		commande.setPrénom("tata");
+		commande.setPrenom("tata");
 		commande.setDate(new Date(0));
 		commande.setMontant(1000.00);
 		commande.setProduit("PROD");

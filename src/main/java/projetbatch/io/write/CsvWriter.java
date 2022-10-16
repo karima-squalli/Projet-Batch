@@ -29,7 +29,7 @@ public class CsvWriter implements Writer {
 	                                         CSVWriter.DEFAULT_ESCAPE_CHARACTER,
 	                                         CSVWriter.DEFAULT_LINE_END);
 	  
-	        List<String[]> data = new ArrayList<String[]>();
+	        List<String[]> data = new ArrayList<>();
 	        
 	        for (Commande commande: commandes) {
 	        	data.add(new String[] { String.valueOf(commande.getId()), commande.getStatut(), Utils.convertDateToString(commande.getDate()) });

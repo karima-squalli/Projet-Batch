@@ -6,7 +6,7 @@ public class Commande {
 
 	private int id;
 	private String nom;
-	private String prénom;
+	private String prenom;
 	
 	private Date date;
 	private String produit;
@@ -15,10 +15,10 @@ public class Commande {
 	
 	public Commande() {}
 	
-	public Commande(int id, String nom, String prénom, Date date, String produit, double montant, String statut) {
+	public Commande(int id, String nom, String prenom, Date date, String produit, double montant, String statut) {
 		this.id = id;
 		this.nom = nom;
-		this.prénom = prénom;
+		this.prenom = prenom;
 		this.date = date;
 		this.produit = produit;
 		this.montant = montant;
@@ -37,11 +37,11 @@ public class Commande {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public String getPrénom() {
-		return prénom;
+	public String getPrenom() {
+		return prenom;
 	}
-	public void setPrénom(String prénom) {
-		this.prénom = prénom;
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
 	}
 	public Date getDate() {
 		return date;

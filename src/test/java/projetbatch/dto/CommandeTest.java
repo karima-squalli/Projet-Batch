@@ -16,7 +16,7 @@ public class CommandeTest {
 		
 		assertEquals(expectedCommande.getId(), 1);
 		assertEquals(expectedCommande.getNom(), "toto");
-		assertEquals(expectedCommande.getPrénom(), "tata");
+		assertEquals(expectedCommande.getPrenom(), "tata");
 		assertEquals(expectedCommande.getDate(), new Date(0));
 		assertEquals(expectedCommande.getMontant(), 1000.00, 0.01);
 		assertEquals(expectedCommande.getProduit(), "PROD");
@@ -29,7 +29,7 @@ public class CommandeTest {
 		
 		assertEquals(expectedCommande.getId(), 1);
 		assertEquals(expectedCommande.getNom(), "toto");
-		assertEquals(expectedCommande.getPrénom(), "tata");
+		assertEquals(expectedCommande.getPrenom(), "tata");
 		assertEquals(expectedCommande.getDate(), new Date(0));
 		assertEquals(expectedCommande.getMontant(), 1000.00, 0.01);
 		assertEquals(expectedCommande.getProduit(), "PROD");

@@ -8,7 +8,6 @@ import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
-import com.opencsv.exceptions.CsvException;
 
 import projetbatch.dto.Commande;
 import projetbatch.utils.Utils;
@@ -27,8 +26,6 @@ class CsvReader implements Reader {
 	 * readFile reads a csv file and extracts commandes information from it
 	 * @param filePath - the csv file path
 	 * @return commandes - the array list of commandes generated from the csv file
-	 * @throws CsvException 
-	 * @throws IOException 
 	 */
 	@Override
 	public ArrayList<Commande> readFile(String filePath) throws Exception {
@@ -43,7 +40,6 @@ class CsvReader implements Reader {
 				.build()){
 			List<String[]> nextRecord = reader.readAll();
 			for (String[] cell : nextRecord) {
-				// System.out.println(Arrays.toString(cell));
 				commandes.add(new Commande(Integer.parseInt(cell[ID]), cell[NOM], cell[PRENOM], Utils.convertStringToDate(cell[DATE]), cell[PRODUIT],
 						Utils.convertDoubleWithComaToDoubleWithDot(cell[MONTANT]), cell[STATUT]));
 			}
